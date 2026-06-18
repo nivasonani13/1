@@ -23,17 +23,150 @@
         }
 
 
-    </style>   
+        .card-container {
+            width: 350px;
+            height: 450px;
+            position:relative;
+            cursor: pointer;
+        }
+
+    
+        .card {
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        card */
+
+        .card.is-open {
+
+            transform: rotateY(-140deg);
+
+        }
+
+        /* Shared styling for card faces */
+
+        .card-front, .card-inside {
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the reverse side */
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+          .card-front {
+
+            background: linear-gradient(135deg, #1b365d, #4a777a);
+            color: #ffffff;
+            z-index: 2;
+
+        }
+
+        .card-front h1 {
+
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+
+        }
+
+        .card-front p {
+
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+
+        }
+
+        .open-btn {
+
+            background-color: #ffffff;
+            color: #1b365d;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+        }
+
+        
+
+        .card-inside { 
+
+            background-color: #ffffff;
+            color: #333333;
+            transform: rotateY(180deg); /* Flips content to face the back */
+            border: 2px solid #e1e8ed;
+
+        }
+
+        .card-inside h2 {
+            color: #1b365d;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+
+        }
+
+        .card-inside p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555555;
+            margin-bottom: 20px;
+
+        }
+
+        .heart {
+            font-size: 2.5rem;
+            color: #e63946;
+            animation: pulse 1.5s infinite;
+
+        }
+
+        
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+
+        }
+
+    </style>
+        
+
+
+      
 </head>
 <body>
-      <div class="card-container"> 
-        <div id-" fatherDayCard" class="card">
+    
+      <div class="card-container" onclick="toggleCard()"> 
+        <div class-"card" id-"fatherDayCard">
             <div class=" card-front">
                  <h1>😁To the best Dad in the world😁</h1>
-                 <img src="fathers-day.png">
-                 <button id-"flip-card">Flip Card</button>
+                 <img src="fathers-day.png" width="250">
+                 <br>
+                 <button class="open btn">click to open</button>
             </div> 
             <div class-"card-back">
+                <H2>Best dad in the world😁</H2>
                  <p>Dear,dad
                     Here is a father's day card from your beloved daughter 
                     Niva. Happy Father's Day. Thank you for working hard
@@ -50,5 +183,16 @@
             </div>
             </div>
             </div>
+               <script>
+
+        function toggleCard() {
+
+            const card = document.getElementById('fatherDayCard');
+
+            card.classList.toggle('is-open');
+
+        }
+
+    </script>
 </body>
 </html>
