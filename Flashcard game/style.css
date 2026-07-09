@@ -9,3 +9,12 @@ body {
     margin: 0;
     overflow: hidden;
 }
+.flashcard-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    max-width: 360px;
+    margin-bottom: 60px;
+}
