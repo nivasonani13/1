@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*vh is vertical height/viewport height. 100vh means 100% viewport height. 
+    This ensures that the app is up the full screen */
+    background: linear-gradient(135deg,#f5a623, #f29d77);
+    margin: 0;
+    overflow: hidden;
+}
