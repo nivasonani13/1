@@ -17,7 +17,9 @@ function checkGuess() {
         // Say wheather the guess is high or low
     }
     if (userGuess < randomNumber) {
-        low0rHi.textContent = "Too low!";
+        low0rHi.textContent = "Too low!"; 
+    } else if (userGuess < randomNumber) {
+        low0rHi.textContent = "Too high"
     }
     guessSubmit.addEventsListener("click", checkGuess);
     fuction setGame0ver() {
