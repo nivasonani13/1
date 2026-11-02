@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { question: "adversary", answer: "An ememy, opponent or rival"},
         { question: "Jury", answer: "A group of people chosen to make a decision in a court case"},
         { question: "Authentic", answer: "Being genuine and true to an original"},
+         { question: "Accommodate", answer: "to provide space, meet someone's needs, or adapt to a situation"},
+        { question: "Exagerate", answer: "To pull something for a long time"},
+        { question: "Discretion", answer: "Judgement"},
+        { question: "Chronology", answer: "the science and method of arranging events in the exact order that they happened in time."},
+       
+ ];
  ];
  let  currentCard = 0;  /*Initialize currentCard to represent which flashcard we are currently viewing. 
                             0 corresponds to the 1st flashcard*/
