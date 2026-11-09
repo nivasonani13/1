@@ -19,31 +19,58 @@ document.addEventListener('DOMContentLoaded', () => {
         { question: "Chronology", answer: "the science and method of arranging events in the exact order that they happened in time."},
        
  ];
- ];
  let  currentCard = 0;  /*Initialize currentCard to represent which flashcard we are currently viewing. 
+
                             0 corresponds to the 1st flashcard*/
+
     /*Grab the "flashcard" element, inorder to get the "question" and the "answer" elements by id */
+
     const flashcardElement = document.getElementById('flashcard'); 
+
     const questionElement = document.getElementById('question');
-    const answerElement = document.getElementById('answer')
+
+    const answerElement = document.getElementById('answer');
+
+    
+
     /*Defining a function to display card */
+
     function displayCard() {
+
         questionElement.textContent = flashcards[currentCard].question;
+
         answerElement.textContent = flashcards[currentCard].answer; 
+
         flashcardElement.classList.remove('is-flipped');  /*This removes the is-flipped class 
+
         from the flashcard element to ensure that it displays the question side when the 
+
         question is first shown */
+
     }
     /* Enables flip feature. It adds Event Listener to the flip button, so when the button is clicked, it flips the card */
+
     document.getElementById('flip-card').addEventListener('click', () => {
+
         flashcardElement.classList.toggle('is-flipped');
+
     });
+
     /* Setting up Event Listener for the Next button. When Next is clicked, increment the currentcard by 1. 
+
     We use the modulo (%)  operator to ensure that if the length exceeds the flashcards length, it resets back to  0.
+
     This ensures looping of flashcards. */
+
     document.getElementById('next-card').addEventListener('click', () => {
+
         currentCard = (currentCard + 1) % flashcards.length;
+
         displayCard();
+
     });
+
     displayCard(); /*Calling this function to initialize the 1st card when the app is shown in the browser */
+
 });
+ 
