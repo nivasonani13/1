@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+100%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step 1: My Gratitude Journal (Starter)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* TODO 1: Choose a light background color for the whole page (example: #f0f4f8) */
+      background-color: lightseagreen ;
+      color: #5493ff;
+      max-width: 720px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    header {
+      /* TODO 2: Choose a dark background color for the header box (example: #2c7a7b) */
+      background-color: darkcyan
+      color: white;
+      padding: 24px;
+      border-radius: 14px;
+      /* TODO 3: Align the header text to the center */
+      text-align: I am thankful for;
+    }
+
+    .card {
+      background-color: white;
+      padding: 22px;
+      margin-top: 20px;
+      /* TODO 4: Round the corners of each card (try 12px) */
+      border-radius: 4444;
+      border-left: 6px solid #2c7a7b;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 14px;
+    }
+
+    input[type="text"], textarea, select {
+      width: 95%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 2px solid #cbd5e0;
+      border-radius: 8px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      /* TODO 5: Pick a bright button color (example: #dd6b20 or orange) */
+      background-color: lightpink;
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- TODO 6: Wrap the main title inside <h1> and </h1> tags -->
+    ____ My Gratitude & Thankfulness Journal ____
+    <p>Fill out your journal below, then click the button to generate your Showcase Page!</p>
+  </header>
+
+  <form onsubmit="saveAndOpenShowcase(event)">
+    <div class="card">
+      <h2>About Me & Page Style</h2>
+      <label for="studentName">Student Name:</label>
+      <!-- TODO 7: Set type="text" inside the input tag below -->
+      <input type="_____" id="studentName" required placeholder="Type your name here...">
+
+      <label for="cardTheme">Choose a Color Theme for Your Showcase Page:</label>
+      <select id="cardTheme">
+        <option value="ocean">🌊 Ocean Teal & Coral</option>
+        <option value="sunset">🌅 Sunset Orange & Gold</option>
+        <option value="forest">🌲 Forest Green & Mint</option>
+        <!-- TODO 8: Add one more <option value="galaxy">🌌 Royal Purple & Sky Blue</option> -->
+        __________________________________________________
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Part 1: Everyday & Overlooked Moments</h2>
+      <label>1. Person, place, or thing I am thankful for:</label>
+      <input type="text" id="item1" required placeholder="Example: My family, the library, my dog...">
+      <input type="text" id="why1" required placeholder="Why it matters...">
+
+      <label>2. Everyday moment I usually overlook:</label>
+      <input type="text" id="item2" required placeholder="Example: A warm breakfast, a funny text...">
+      <input type="text" id="why2" reqired placeholder="Why it matters...">
+    </div>
+
+
+
+ion this week:</label>
+
+u note">Write a quick thank-you note</option>
+hout being asked">Do a helpful chore without being asked</option>
+c compliment">Give someone a specific compliment</option>
+
+
+what is your plan?</label>
+ired placeholder="Write your specific plan here...">
+
+
+
+/h2>
+help you handle stress?</label>
+perly with </textarea> -->
+required placeholder="Write 3-4 sentences..."></_________>
+
+
+ class="submit-btn">Build My Showcase Page!</button> below -->
+___________________________
+
+
+
+
+
+
+"studentName").value.trim() || "6th Grade Coder",
+ardTheme").value,
+").value.trim(),
+.value.trim(),
+").value.trim(),
+.value.trim(),
+        actionChoice: document.getElementById("actionChoice").value,
+        actionPlan: document.getElementById("actionPlan").value.trim(),
+        reflectionText: document.getElementById("reflectionText").value.trim()
+      };
+      localStorage.setItem("gratitudeJournalData", JSON.stringify(data));
+      const params = new URLSearchParams(data).toString();
+      // Links directly to the student showcase starter file!
+      window.location.href = "starter_showcase.html?" + params;
+    }
+  </script>
+
+</body>
+</html>
